@@ -1,0 +1,91 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.data{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.biodata{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.biodata h1{
+    margin: 0;
+}
+
+.biodata h4{
+    margin: 0;
+}
+
+.foto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.foto a{
+    background-color: rgb(42, 42, 207);
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.foto img{
+    width: 200px;
+    border-radius: 50%;
+}
+
+.con-log{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.con-log form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.con-log form label{
+    margin-top: 10px;
+}
+
+.edit-con{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.edit-con form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.edit-con form input{
+    margin-bottom: 10px;
+}
+
+.edit-con form label{
+    margin-bottom: 2px;
+}
+
+.edit-con form button{
+    margin-top: 20px;
+}
