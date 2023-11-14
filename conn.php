@@ -2,7 +2,7 @@
 $host = "localhost";
 $user = "widi";
 $password = "12345";
-$database = "CV";
+$database = "cv";
 
 $sambung = mysqli_connect($host, $user, $password, $database);
 if (!$sambung) {

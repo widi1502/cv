@@ -3,7 +3,7 @@ include_once('conn.php');
 session_start();
 session_destroy();
 
-$result = mysqli_query($conn, "SELECT * FROM cv_data ORDER BY nama ASC");
+$result = mysqli_query($sambung, "SELECT * FROM cv_data ORDER BY nama ASC");
 $data = mysqli_fetch_array($result);
 ?>
 

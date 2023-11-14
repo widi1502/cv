@@ -7,9 +7,9 @@
   }
 function getCVData()
 {
-  global $conn;
+  global $sambung;
   $query = "SELECT * FROM cv_data WHERE id = 1";
-  $result = mysqli_query($conn, $query);
+  $result = mysqli_query($sambung, $query);
   return mysqli_fetch_array($result);
 }
 
@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         foto_path = ? 
         WHERE id = 1";
 
-  $stmt = mysqli_prepare($conn, $query);
+  $stmt = mysqli_prepare($sambung, $query);
   mysqli_stmt_bind_param($stmt, "sssssssss", $nama, $alamat, $telepon, $email, $web, $pendidikan, $pengalaman_kerja, $keterampilan, $foto_path);
 
   if (mysqli_stmt_execute($stmt)) {
@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   }
 
   mysqli_stmt_close($stmt);
-  mysqli_close($conn);
+  mysqli_close($sambung);
 
   header('Location: index.php');
   exit();

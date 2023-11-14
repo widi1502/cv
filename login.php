@@ -5,10 +5,10 @@ include_once('conn.php');
 if(isset($_POST['submit'])){
   $email = $_POST['user'];
   $password = $_POST['password'];
-  $result = mysqli_query($conn, "SELECT * FROM cv_login WHERE username = '$email' OR email = '$email'");
+  $result = mysqli_query($sambung, "SELECT * FROM cv_user WHERE username = '$email' OR email = '$email'");
   $row = mysqli_fetch_assoc($result);
   if(mysqli_num_rows($result) > 0){
-    if($password == $row["password"]){
+    if($password == $row["pass"]){
       $_SESSION["login"] = true;
       header("Location: edit.php");
     }else{
